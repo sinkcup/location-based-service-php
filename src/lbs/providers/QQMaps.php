@@ -7,8 +7,7 @@ namespace lbs\providers;
 
 class QQMaps
 {
-    protected $conf = array(
-    );
+    private $conf = array();
 
     public function __construct($conf)
     {
@@ -28,13 +27,12 @@ class QQMaps
             throw new Exception('http error', $code);
         }
 
-        $tmp = $http->getResponseBody();
-        $j = json_decode($tmp, true);
-        if (!isset($j['result']['location']['lat'])) {
-            throw new Exception($j['message'], $j['status']);
+        $r = json_decode($http->getResponseBody(), true);
+        if (!isset($r['result']['location']['lat'])) {
+            throw new Exception($r['message'], $r['status']);
         }
 
-        return $j['result']['location'];
+        return $r['result']['location'];
     }
 
     public function decode(
@@ -51,14 +49,13 @@ class QQMaps
             throw new Exception('http error', $code);
         }
 
-        $tmp = $http->getResponseBody();
-        $j = json_decode($tmp, true);
-        if (!isset($j['result']['address'])) {
-            throw new Exception($j['message'], $j['status']);
+        $r = json_decode($http->getResponseBody(), true);
+        if (!isset($r['result']['address'])) {
+            throw new Exception($r['message'], $r['status']);
         }
 
         return array(
-            'address' => $j['result']['address'],
+            'address' => $r['result']['address'],
         );
     }
 }

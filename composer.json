@@ -12,7 +12,10 @@
     ],
     "autoload": {
         "psr-0": {
-            "LBS\\": "src/"
+            "lbs\\": "src/"
         }
+    },
+    "require": {
+        "ext-http": "1.7.*"
     }
 }

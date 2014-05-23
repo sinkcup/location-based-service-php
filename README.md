@@ -1,7 +1,7 @@
 location-based-service-php
 ==========================
 
-PHP LBS 位置服务：geocoding地理编码、反向地理编码、距离计算
+PHP LBS 位置服务（composer版）：geocoding地理编码、反向地理编码、距离计算
 
 ##依赖
 

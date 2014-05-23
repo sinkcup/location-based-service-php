@@ -5,8 +5,12 @@ class Geo
 {
     private $provider;
 
-    public function __construct($provider, $conf=array())
-    {
+    public function __construct($provider,
+        $conf = array(
+            'key' => null,
+            'lang' => 'zh-Hans',
+        )
+    ) {
         switch($provider) {
             case 'qq':
             case 'tencent':
