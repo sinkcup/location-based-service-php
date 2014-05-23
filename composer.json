@@ -1,0 +1,18 @@
+{
+    "name": "sinkcup/location-based-service-php",
+    "description": "PHP LBS 位置服务（composer版）：geocoding地理编码、反向地理编码、距离计算",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "sinkcup",
+            "homepage": "http://cnblogs.com/sink_cup/",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "LBS\\": "src/"
+        }
+    }
+}
