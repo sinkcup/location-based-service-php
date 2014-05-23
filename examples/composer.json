@@ -1,0 +1,6 @@
+{
+    "minimum-stability": "dev",
+    "require": {
+        "sinkcup/location-based-service-php" : "*"
+    }
+}
